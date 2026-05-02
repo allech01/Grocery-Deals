@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.ai.client.generativeai.GenerativeModel
 import kotlinx.coroutines.runBlocking
@@ -54,9 +55,15 @@ class AiFragment : Fragment() {
             // Add the user message to the layout
             messageLayout.addView(userMessage)
 
+            val apiKey = BuildConfig.GEMINI_API_KEY
+            if (apiKey.isBlank()) {
+                Toast.makeText(requireContext(), "Gemini API key is missing. Add GEMINI_API_KEY to local.properties.", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
             val generativeModel = GenerativeModel(
                 modelName = "gemini-1.5-flash",
-                apiKey = "AIzaSyCcGDLLah6CLLVIRt-eVXd5BeibF8CLqDk" // ENTER YOUR KEY
+                apiKey = apiKey
             )
 
             runBlocking {
