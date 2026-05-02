@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_main"
+    android:background="#FFFFFF"
+    >
+    <LinearLayout
+        android:id="@+id/top_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/back_button"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/back_button"
+        android:padding="0dp"
+        />
+    <TextView
+        android:id="@+id/welcome_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!  👋"
+        android:textColor="#77944d"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/back_button"
+        />
+</LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/imageflipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_navigation"
+        android:layout_marginTop="10dp"
+        android:flipInterval="2000"
+        android:background="@color/white"
+        android:autoStart="true"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/pic4"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/pic3"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/pic2"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/pic1"/>
+    </ViewFlipper>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/imageflipper"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/login_background"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/facebook_button"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        android:weightSum="1"
+        android:background="@drawable/round_corner"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#2A40B8"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/facebook_icon"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/facebook2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3c549c"
+            android:background="@null"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:text="Continue With Facebook"
+            android:padding="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/google_button"
+        android:layout_below="@+id/facebook_button"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/google_background"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/google_icon"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/google2"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Continue With Google"
+            android:background="@null"
+            android:textColor="#000000"
+            android:textSize="16sp"
+
+            android:padding="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Or_view"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/google_button"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:background="#77944d" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#77944d"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="0dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:background="#77944d" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_email_button"
+        android:layout_below="@+id/Or_view"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/google_background"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mail"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/user2"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Continue With Email"
+            android:background="@null"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:padding="0dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/not_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Don't have an Account?"
+        android:layout_marginBottom="50dp"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:padding="0dp"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/signup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Sign up"
+        android:textColor="#77944d"
+        android:background="@null"
+        android:textSize="16sp"
+        android:padding="0dp"
+        android:layout_alignBaseline="@+id/not_account"
+        android:layout_toEndOf="@id/not_account"
+        android:layout_marginTop="10dp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <!-- Test Ad Unit IDs for Development -->
+    <string name="admob_interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="default_web_client_id">685527973174-q8vckdmcbampt2ehubsukt9383lcb129.apps.googleusercontent.com</string>
+</resources>
