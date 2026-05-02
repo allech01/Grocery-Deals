@@ -14,8 +14,7 @@ An AI-powered Android grocery assistant that combines multi-turn Gemini conversa
 
 ## Screenshots
 
-| Login | Shopping Lists | AI Chat | Settings |
-|-------|---------------|---------|----------|
+
 | <img src="app/screenshorts/Screenshot_20241201_123955.jpg" width="180" alt="Login screen showing email/password fields, Google Sign-In button, and Remember Me checkbox"> | <img src="app/screenshorts/Screenshot_20241201_124007.jpg" width="180" alt="List screen showing RecyclerView of saved grocery lists with delete and add actions"> | <img src="app/screenshorts/Screenshot_20241201_124023.jpg" width="180" alt="AI chat screen showing user and Gemini message bubbles with conversation history"> | <img src="app/screenshorts/Screenshot_20241201_124132.jpg" width="180" alt="Settings screen with logout button and account info"> |
 
 > **Capture tips:** For the best screenshots, capture (1) the login screen with the Google button visible, (2) the list view with at least two saved lists, (3) a multi-turn AI conversation showing both user and assistant bubbles, and (4) the settings/profile screen.
