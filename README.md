@@ -1,108 +1,106 @@
-# Grocery Deals – JavaAi Android App
+# Grocery Deals
 
-An Android application for managing grocery deals and shopping lists, with an AI-powered assistant.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![AdMob](https://img.shields.io/badge/AdMob-EA4335?style=for-the-badge&logo=google&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
 
-## Project Structure
+An AI-powered Android grocery assistant that combines multi-turn Gemini conversations, offline-persistent shopping lists, and Firebase authentication — all under a single bottom-navigation shell. Built to production standards with secure build-time API-key injection and a monetisation-ready AdMob integration.
 
-```
-app/
-├── JavaAi/              # Android Studio project
-│   ├── app/
-│   │   └── src/main/
-│   │       ├── java/com/example/javaai/   # Java/Kotlin source files
-│   │       └── res/                        # Resources (layouts, drawables, etc.)
-│   ├── build.gradle.kts
-│   └── settings.gradle.kts
-└── screenshorts/        # App screenshots
-```
-
-## STAR Feature Highlights
-
-- ⭐ **AI Grocery Assistant**
-  - **Situation:** Shoppers need quick guidance while planning meals and deals.
-  - **Task:** Provide in-app, conversational suggestions without leaving the app.
-  - **Action:** Integrated a Gemini-powered chat with message bubbles and conversation history.
-  - **Result:** Users can ask questions and receive real-time, context-aware responses.
-
-- ⭐ **Secure Authentication & Google Sign-In**
-  - **Situation:** Users expect fast, trusted access to their accounts.
-  - **Task:** Offer reliable login/signup flows with familiar identity providers.
-  - **Action:** Implemented Firebase Authentication, Google Sign-In, password visibility toggles, and remember-me storage.
-  - **Result:** Smooth onboarding with fewer login drop-offs.
-
-- ⭐ **Password Recovery with OTP**
-  - **Situation:** Users forget passwords and need quick recovery.
-  - **Task:** Provide a clear, guided reset flow.
-  - **Action:** Added email validation, OTP generation, and verification UI for recovery.
-  - **Result:** Users can regain access without support tickets.
-
-- ⭐ **Smart Shopping Lists**
-  - **Situation:** Shoppers need a lightweight way to create and track lists.
-  - **Task:** Enable list creation and item management that works offline.
-  - **Action:** Built Create List + Items screens with RecyclerView and SharedPreferences persistence.
-  - **Result:** Lists stay available across sessions without extra setup.
-
-- ⭐ **Bottom Navigation & Settings**
-  - **Situation:** Users want quick access to lists, AI help, and settings.
-  - **Task:** Provide fast navigation between core experiences.
-  - **Action:** Implemented bottom navigation with dedicated List, AI, and Settings destinations plus logout actions.
-  - **Result:** Core features stay one tap away.
-
-- ⭐ **AdMob Monetization Ready**
-  - **Situation:** The app needs a clear monetization path.
-  - **Task:** Integrate ads without blocking the core flow.
-  - **Action:** Added banner and interstitial AdMob placements with load handling.
-  - **Result:** Monetization-ready surfaces are in place.
-
-- ⭐ **Animated Splash Experience**
-  - **Situation:** First impressions matter during app launch.
-  - **Task:** Deliver a polished opening sequence.
-  - **Action:** Implemented a video-based splash animation before entering the app.
-  - **Result:** A smoother, more branded startup experience.
-
-## Requirements
-
-- Android Studio Hedgehog or later
-- Android SDK 26+ (minSdk 26, targetSdk 35)
-
-## Configuration
-
-- Add your Gemini key to `local.properties` (or export `GEMINI_API_KEY`):
-  - `GEMINI_API_KEY=your_key_here`
-- `google-services.json` is already included in `JavaAi/app/` for Firebase.
-- Update AdMob test device ID and ad unit IDs if needed.
-
-## Getting Started
-
-1. Clone this repository.
-2. Open `app/JavaAi` in Android Studio.
-3. Add `GEMINI_API_KEY` to `local.properties`.
-4. Let Gradle sync the project dependencies.
-5. Run the app on an emulator or physical device (API 26+).
+---
 
 ## Screenshots
 
-![Screenshot 1](app/screenshorts/Screenshot_20241201_123955.jpg)
-![Screenshot 2](app/screenshorts/Screenshot_20241201_124001.jpg)
-![Screenshot 3](app/screenshorts/Screenshot_20241201_124007.jpg)
-![Screenshot 4](app/screenshorts/Screenshot_20241201_124012.jpg)
-![Screenshot 5](app/screenshorts/Screenshot_20241201_124023.jpg)
-![Screenshot 6](app/screenshorts/Screenshot_20241201_124132.jpg)
-![Screenshot 7](app/screenshorts/WhatsApp%20Image%202025-02-02%20at%2012.31.01_c96d6b9e.jpg)
-![Screenshot 8](app/screenshorts/WhatsApp%20Image%202025-02-02%20at%2012.31.01_caf092ba.jpg)
-![Screenshot 9](app/screenshorts/WhatsApp%20Image%202025-02-02%20at%2012.31.02_f2e3f6f1.jpg)
-![Screenshot 10](app/screenshorts/WhatsApp%20Image%202025-02-02%20at%2012.31.03_0c66d78c.jpg)
-![Screenshot 11](app/screenshorts/WhatsApp%20Image%202025-02-02%20at%2012.31.03_d0abcbea.jpg)
-![Screenshot 12](app/screenshorts/WhatsApp%20Image%202025-02-02%20at%2012.31.03_ee91dee3.jpg)
+| Login | Shopping Lists | AI Chat | Settings |
+|-------|---------------|---------|----------|
+| <img src="app/screenshorts/Screenshot_20241201_123955.jpg" width="180" alt="Login screen showing email/password fields, Google Sign-In button, and Remember Me checkbox"> | <img src="app/screenshorts/Screenshot_20241201_124007.jpg" width="180" alt="List screen showing RecyclerView of saved grocery lists with delete and add actions"> | <img src="app/screenshorts/Screenshot_20241201_124023.jpg" width="180" alt="AI chat screen showing user and Gemini message bubbles with conversation history"> | <img src="app/screenshorts/Screenshot_20241201_124132.jpg" width="180" alt="Settings screen with logout button and account info"> |
+
+> **Capture tips:** For the best screenshots, capture (1) the login screen with the Google button visible, (2) the list view with at least two saved lists, (3) a multi-turn AI conversation showing both user and assistant bubbles, and (4) the settings/profile screen.
+
+---
+
+## Key Features
+
+- 🤖 **Stateful Gemini AI Chat** — engineered a multi-turn conversation engine that appends every user/AI exchange to an in-memory history buffer and passes the full context to `gemini-1.5-flash` on each request, enabling coherent, session-aware grocery advice without a backend.
+- 🔐 **Firebase Auth + Google Sign-In** — implemented the full OAuth handshake (`GoogleSignInOptions` → `GoogleAuthProvider.getCredential` → Firebase credential exchange), password-visibility toggle, and a "Remember Me" flow backed by SharedPreferences — reducing friction at every login step.
+- 📧 **OTP Password Recovery** — built a 4-digit OTP generator with `java.util.Random`, client-side email-format validation via `Patterns.EMAIL_ADDRESS`, and a Fragment-based verification screen wired through a `Bundle` argument pipeline — all without a third-party SDK.
+- 📋 **Offline-Persistent Shopping Lists** — architected a full CRUD layer on top of SharedPreferences (`Set<String>` for list names + per-list item sets), surfaced through a `RecyclerView`-backed `ListFragment` with swipe-to-delete and live adapter refresh — lists survive process death with zero cloud dependency.
+- 🎬 **Immersive Video Splash Screen** — built a `VideoView`-driven branded launch experience with muted, non-looping playback and full system-UI immersive mode (`SYSTEM_UI_FLAG_FULLSCREEN | SYSTEM_UI_FLAG_HIDE_NAVIGATION`), auto-navigating to `MainActivity` on completion.
+- 🔑 **Secure Build-Time API Key Injection** — configured Gradle (Kotlin DSL) to read `GEMINI_API_KEY` from `local.properties` **or** a CI/CD environment variable, inject it as a `BuildConfig` field, and apply string escaping — API secrets are never committed to source control.
+- 💰 **AdMob Monetisation Ready** — integrated banner and interstitial ad placements with load-state handling, providing a clear monetisation surface that does not block core user flows.
+
+---
 
 ## Tech Stack
 
 | Layer | Technology |
-|-------|-----------|
+|-------|------------|
 | Language | Java & Kotlin |
-| UI | XML Layouts, Material Design |
-| Auth | Firebase Authentication |
-| Database | Firebase Firestore |
-| AI | Gemini / OpenAI integration |
+| UI | XML Layouts · Material Design · View Binding |
+| Auth | Firebase Authentication · Google Sign-In |
+| Storage | Firebase Storage · SharedPreferences |
+| AI | Google Gemini AI (`gemini-1.5-flash`) |
 | Ads | Google AdMob |
 | Build | Gradle (Kotlin DSL) |
+| Min SDK | 26 (Android 8.0) |
+| Target SDK | 35 (Android 15) |
+
+---
+
+## Prerequisites
+
+- Android Studio Hedgehog (2023.1.1) or later
+- Android SDK API 26+
+- A [Google Gemini API key](https://aistudio.google.com/app/apikey)
+
+---
+
+## Installation & Usage
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/allech01/Grocery-Deals.git
+cd Grocery-Deals
+
+# 2. Open the Android project in Android Studio
+#    File → Open → select the  app/JavaAi  folder
+
+# 3. Add your Gemini API key to local.properties
+echo "GEMINI_API_KEY=your_key_here" >> app/JavaAi/local.properties
+
+# 4. Sync Gradle and run
+#    Click "Sync Now" in Android Studio, then Run ▶ on an emulator or physical device (API 26+)
+```
+
+> **Note:** `google-services.json` is already included in `app/JavaAi/app/` for Firebase. Update AdMob ad unit IDs in the source if you plan to publish.
+
+---
+
+## Project Structure
+
+```
+Grocery-Deals/
+├── app/
+│   ├── JavaAi/                          # Android Studio project root
+│   │   ├── app/
+│   │   │   └── src/main/
+│   │   │       ├── java/com/example/javaai/
+│   │   │       │   ├── AiFragment.kt              # Gemini multi-turn chat
+│   │   │       │   ├── AnimatedLogoActivity.java  # Video splash screen
+│   │   │       │   ├── LoginPageActivity.java     # Firebase + Google Sign-In
+│   │   │       │   ├── ForgotPasswordActivity.java # OTP generation & routing
+│   │   │       │   ├── OtpVerificationActivity.java # OTP verification fragment
+│   │   │       │   ├── CreateList.java            # New list + item creation
+│   │   │       │   ├── ItemsActivity.java         # Per-list item management
+│   │   │       │   ├── ListFragment.java          # RecyclerView list browser
+│   │   │       │   ├── MainActivity.java          # Bottom navigation host
+│   │   │       │   └── SettingFragment.java       # Settings & logout
+│   │   │       └── res/                           # Layouts, drawables, menus
+│   │   ├── build.gradle.kts
+│   │   └── settings.gradle.kts
+│   └── screenshorts/                    # App screenshots
+└── README.md
+```
