@@ -10,7 +10,7 @@
 
 ## Project Description
 
-Grocery-Deals is an AI-powered Android grocery assistant that combines multi-turn Gemini conversations, offline-persistent shopping lists, and Firebase authentication — all under a single bottom-navigation shell. It is built to production standards with secure build-time API-key injection and a monetisation-ready AdMob integration.
+Grocery-Deals is an AI-powered Android grocery assistant that combines multi-turn Gemini conversations, offline-persistent shopping lists, and Firebase authentication — all under a single bottom-navigation shell. It is built to production standards with secure build-time API-key injection and a monetization-ready AdMob integration.
 
 ---
 
